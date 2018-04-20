@@ -1073,5 +1073,40 @@ dependencies needed for per-platform integration. In general, you can use
 find great packages for Flutter is
 [Pub](https://pub.dartlang.org/flutter/packages/).
 
+# ViewControllers
+
+## What is the equivalent to `ViewController`s in Flutter?
+
+In iOS, a `ViewController` represents a portion of user interface, most
+commonly used for a screen or section. These can be composed together to build
+complex user interfaces, and help scale your application UI. In Flutter this
+concept falls under the umbrella of `Widget`s. As mentioned in the Navigation
+section, screens in Flutter are represented by `Widget`s since everything is a
+widget in Flutter. You use a `Navigator` to move between different `Route`s
+which represent different screens or pages, or maybe just different states or
+renderings of the same data.
+
+## How do I listen to iOS lifecycle events?
+
+In iOS, you can override methods to the `ViewController` to capture lifecycle
+methods for the view itself, or register lifecycle callbacks in the
+`AppDelegate`. In Flutter you have neither concept, but you can instead listen
+to lifecycle events by hooking into the `WidgetsBinding` observer and
+listening to the `didChangeAppLifecycleState()` change event.
+
+The lifecycle events you can observe are:
+
+* `inactive` — The application is in an inactive state and is not receiving
+user   input. This event only works on iOS, as there is no equivalent event to
+map to   on Android * `paused` — The application is not currently visible to
+the user, not responding   to user input, and running in the background. *
+`resumed` — The application is visible and responding to user input. *
+`suspending` — The application will be suspended momentarily. It is not
+triggered on iOS as there is no equivalent   event to map to on iOS
+
+For more details on the meaning of these states, you can check the
+[`AppLifecycleStatus` documentation](https://docs.flutter.io/flutter/dart-ui
+/AppLifecycleState-class.html).0
+
 
 

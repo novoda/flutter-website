@@ -1562,7 +1562,99 @@ class SampleApp extends StatelessWidget {
 }
 {% endprettify %}
 
+# Theming and text
 
+## How do I theme an app?
+
+You may have noticed a lot of the examples in this document use a root
+`MaterialApp`. This provides a base of themed widgets to use in your app.
+However these are more themed to an Android device, so in order to use more
+iOS focused widgets you will need to implement these as needed. You can find
+the full set [here](https://flutter.io/widgets/cupertino/).
+
+You could also use a `WidgetApp` as your app widget, which provides similar
+functionality but is not yet as broad as `MaterialApp`.
+
+To customize the colors and styles of any child components you can pass in a
+ThemeData object to the `MaterialApp` widget. For example, in the code below
+you can see the primary swatch is set to blue and all text selection color
+should be red.
+
+<!-- skip -->
+{% prettify dart %}
+class SampleApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+      title: 'Sample App',
+      theme: new ThemeData(
+        primarySwatch: Colors.blue,
+        textSelectionColor: Colors.red
+      ),
+      home: new SampleAppPage(),
+    );
+  }
+}
+{% endprettify %}
+
+## How do I set custom fonts on my `Text` widgets?
+
+In iOS, you would import any `ttf` font files into your project, and create a
+reference in the `info.plist` file. In a similar fashion, in Flutter you need
+to place the font file in a folder and reference it in the `pubspec.yaml`,
+similarly to how you import images.
+
+<!-- skip -->
+{% prettify yaml %}
+fonts:
+   - family: MyCustomFont
+     fonts:
+       - asset: fonts/MyCustomFont.ttf
+       - style: italic
+{% endprettify %}
+
+Then you would assign the font to your `Text` widget:
+
+<!-- skip -->
+{% prettify dart %}
+@override
+Widget build(BuildContext context) {
+  return new Scaffold(
+    appBar: new AppBar(
+      title: new Text("Sample App"),
+    ),
+    body: new Center(
+      child: new Text(
+        'This is a custom font text',
+        style: new TextStyle(fontFamily: 'MyCustomFont'),
+      ),
+    ),
+  );
+}
+{% endprettify %}
+
+## How do I style my `Text` widgets?
+
+Along with customizing fonts, you can customize a lot of different styles on a
+`Text` widget.
+
+The style parameter of a `Text` widget takes a `TextStyle` object, where you can
+customize many parameters, such as:
+
+- `color
+- `decoration`
+- `decorationColor`
+- `decorationStyle`
+- `fontFamily`
+- `fontSize`
+- `fontStyle`
+- `fontWeight`
+- `hashCode`
+- `height`
+- `inherit`
+- `letterSpacing`
+- `textBaseline`
+- `wordSpacing`
 
 
 

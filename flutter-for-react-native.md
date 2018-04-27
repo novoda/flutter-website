@@ -4,7 +4,7 @@ title: Flutter for React Native Developers
 permalink: /flutter-for-react-native/
 ---
 
-This document is for React Native developers looking to apply their existing React Native knowledge to build mobile apps with Flutter. If you understand the fundamentals of the React Native framework, then you can use this document as a jump start to your Flutter development. 
+This document is for React Native developers looking to apply their existing React Native knowledge to build mobile apps with Flutter. If you understand the fundamentals of the React Native framework, then you can use this document as a jump start to your Flutter development.
 
 
 * TOC Placeholder
@@ -1915,7 +1915,7 @@ child: new Dismissible(
 ||itemBuilder [required] |[[ Indexed Widget Builder](https://docs.flutter.io/flutter/widgets/IndexedWidgetBuilder.html)] helps in building the children on demand. This callback will be called only with indices greater than or equal to zero and less than itemCount.
 ||itemCount |[ int ] It improves the ability of the ListView to estimate the maximum scroll extent.
 |                                                                                           |                                                                                                            |                                                                                                                                        |
-| [Image](https://docs.flutter.io/flutter/widgets/Image-class.html)                         | [Image](https://facebook.github.io/react-native/docs/image.html)                                           | A widget that displays an image.                                                                                                       |
+| [Image](https://facebook.github.io/react-native/docs/image.html)                         | [Image](https://docs.flutter.io/flutter/widgets/Image-class.html)                                           | A widget that displays an image.                                                                                                       |
 |                                                                                           |  image [required]                                                                                          | The image to display.                                                                                                                  |
 |                                                                                           | Image. asset                                                                                                | Several constructors are provided for the various ways that an image can be specified.                                                 |
 |                                                                                           | width, height, color, alignment                                                                            | Style and Layout for the Image                                                                                                         |
@@ -1948,9 +1948,9 @@ child: new Dismissible(
 |||
 | [Touchable Opacity](https://facebook.github.io/react-native/docs/touchableopacity.html)    | [Gesture Detector](https://docs.flutter.io/flutter/widgets/GestureDetector-class.html)                      | detects gestures                                                                                                                       |
 |                                                                                           | onTap                                                                                                      | callback when tap occurs                                                                                                               |
-|                                                                                           | onDoubleTap                                                                                                | callback when tap occurs 
+|                                                                                           | onDoubleTap                                                                                                | callback when tap occurs
 |||
-| [Text Input](https://docs.flutter.io/flutter/services/TextInput-class.html)                | [Text Input](https://facebook.github.io/react-native/docs/textinput.html)                                   | interface to the system's text input control                                                                                           |
+| [Text Input](https://facebook.github.io/react-native/docs/textinput.html)                | [Text Input](https://docs.flutter.io/flutter/services/TextInput-class.html)                                   | interface to the system's text input control                                                                                           |
 |                                                                                           | controller                                                                                                 | [ [Text Editing Controller](https://docs.flutter.io/flutter/widgets/TextEditingController-class.html) ] to access and modify text.
 |||
 | [Text](https://facebook.github.io/react-native/docs/text.html)                          | [Text](https://docs.flutter.io/flutter/widgets/Text-class.html)                                            | A run of text with a single style.                                                                                                                                                                           |
